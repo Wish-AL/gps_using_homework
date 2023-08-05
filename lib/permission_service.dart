@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
-class LocationService extends ChangeNotifier {
+class LocationService {
   Position? position;
   LocationPermission? permission;
   bool serviceEnabled = false;
@@ -35,17 +35,18 @@ class LocationService extends ChangeNotifier {
 
   void getOnceTimeLocation() async {
     position = await Geolocator.getCurrentPosition();
-    notifyListeners();
+
   }
+
 
   Future<void> currentLocation() async {
     if( await isLocationServiceEnabled()) {
-      serviceEnabled = true;
+      //serviceEnabled = true;
       positionStream =
           Geolocator.getPositionStream().listen((Position? position) {
             latitude = position?.latitude;
             longitude = position?.longitude;
-            notifyListeners();
+
           });
     }
   }
