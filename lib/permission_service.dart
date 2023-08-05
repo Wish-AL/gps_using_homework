@@ -13,6 +13,7 @@ class LocationService extends ChangeNotifier {
   double? longitude;
 
   Future<bool> isLocationServiceEnabled() async {
+    locationPermission();
     return await Geolocator.isLocationServiceEnabled();
   }
 
