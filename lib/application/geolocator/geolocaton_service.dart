@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:geolocator/geolocator.dart';
 
-import 'models/position.dart';
+import '/models/position.dart';
 
 class GeolocationService {
   StreamSubscription<Position>? positionStream;

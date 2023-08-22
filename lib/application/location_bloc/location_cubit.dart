@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:gps_homework/geoloation_repository.dart';
+import 'package:gps_homework/application/geolocator/geoloation_repository.dart';
 
-import 'models/position.dart';
+import '../../models/position.dart';
 
 part 'location_state.dart';
 
